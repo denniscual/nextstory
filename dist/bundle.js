@@ -1,2 +1,2 @@
-!function(t){function o(e){if(r[e])return r[e].exports;var n=r[e]={exports:{},id:e,loaded:!1};return t[e].call(n.exports,n,n.exports,o),n.loaded=!0,n.exports}var r={};return o.m=t,o.c=r,o.p="/static/",o(0)}([function(t,o,r){t.exports=r(1)},function(t,o){"use strict";console.log("lets go")}]);
+!function(r){function t(o){if(n[o])return n[o].exports;var e=n[o]={exports:{},id:o,loaded:!1};return r[o].call(e.exports,e,e.exports,t),e.loaded=!0,e.exports}var n={};return t.m=r,t.c=n,t.p="/static/",t(0)}([function(r,t,n){!function(){throw new Error('Cannot find module "./client/reduxstagram"')}()}]);
 //# sourceMappingURL=bundle.js.map

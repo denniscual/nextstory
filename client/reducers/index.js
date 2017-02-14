@@ -1,12 +1,13 @@
 import { combineReducers } from "redux"
 import { routerReducer } from "react-router-redux"
 
-import comments from "./commentsReducer"
-import posts from "./postsReducer"
+import category from "./categoryReducer"
+import categoryFilter from "./categoryFilterReducer"
+import sources from "./sourcesReducer"
 
 
 export default combineReducers({
-    comments,
-    posts,
-    routing: routerReducer
+    sources,
+    categoryFilter,
+    routing: routerReducer 
 });

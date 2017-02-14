@@ -1,14 +1,16 @@
 import React from "react"
 import { render } from "react-dom"
 import { Router, Route, IndexRoute } from "react-router"
-
-// import css
-import css from "./styles/style.styl"
-
+  
 // import components
 import App from "./components/App"
-import PhotoGrid from "./components/PhotoGrid"
-import Single from "./components/Single"
+import Home from "./components/Pages/Home"
+import Technology from "./components/Pages/Technology"
+import Sport from "./components/Pages/Sport"
+import Business from "./components/Pages/Business"
+import Entertainment from "./components/Pages/Entertainment"
+import Gaming from "./components/Pages/Gaming"
+import Music from "./components/Pages/Music"
 
 // import stores
 import { Provider } from "react-redux"
@@ -18,8 +20,13 @@ const appRouter = (
     <Provider store={store}> 
         <Router history={history}>
             <Route path="/" component={App}>
-                <IndexRoute component={PhotoGrid}/>
-                <Route path="/view/:postId" component={Single} />
+                <IndexRoute component={Home}/>
+                <Route path="/technology" component={Technology}/>
+                <Route path="/sport" component={Sport}/>
+                <Route path="/business" component={Business}/>
+                <Route path="/entertainment" component={Entertainment}/>
+                <Route path="/gaming" component={Gaming}/>
+                <Route path="/music" component={Music}/>
             </Route>
         </Router>
     </Provider>
