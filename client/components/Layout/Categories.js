@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router"
+import { IndexLink,Link } from "react-router"
 
 
 export default class Categories extends React.Component{
@@ -15,7 +15,7 @@ export default class Categories extends React.Component{
             <ul class={`siteMenu  ${extraClass}`}>
                 {extraElement}
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/" > General </Link>
+                    <IndexLink activeStyle={{color: '#fff', fontWeight: 500}} to="/" > General </IndexLink>
                 </li>
                 <li class="siteMenu__item">
                     <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/sport"> Sport </Link>

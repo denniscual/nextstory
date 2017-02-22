@@ -27,10 +27,10 @@ function fetchSourcesSuccess(data){
   }
 }
 
-export function fetchSources() {
+export function fetchSources(category) {
   return function(dispatch) {
     dispatch(fetchingSources());
-    return axios.get(`${SOURCES}`)
+    return axios.get(`${SOURCES}?category=${category}`)
       .then((response) => {
         dispatch(fetchSourcesSuccess(response.data))
       })

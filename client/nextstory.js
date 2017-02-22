@@ -21,13 +21,13 @@ const appRouter = (
         <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
-                <Route path="/technology" component={Technology}/>
-                <Route path="/sport" component={Sport}/>
-                <Route path="/business" component={Business}/>
-                <Route path="/entertainment" component={Entertainment}/>
-                <Route path="/gaming" component={Gaming}/>
-                <Route path="/music" component={Music}/>
-            </Route>
+                <Route path="technology" component={Technology}/>
+                <Route path="sport" component={Sport}/>
+                <Route path="business" component={Business}/>
+                <Route path="entertainment" component={Entertainment}/>
+                <Route path="gaming" component={Gaming}/>
+                <Route path="music" component={Music}/>
+            </Route>          
         </Router>
     </Provider>
 );

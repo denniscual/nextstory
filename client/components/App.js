@@ -3,6 +3,8 @@ import { connect } from "react-redux"
 
 // importing actionCreators
 import * as sourcesActionCreator from "../actions/sourcesAction"
+import * as articlesActionCreator from "../actions/articlesAction"
+
 // import * as postActionCreators from "../actions/posts"
 
 
@@ -12,6 +14,7 @@ import Main from "./Main"
 const mapStateToProps = (state) => {
   return {
       sources: state.sources,
+      sourceArticles: state.sourceArticles,
       category: state.category,
       categoryFilter: state.categoryFilter,
   } 
@@ -20,7 +23,8 @@ const mapStateToProps = (state) => {
 // map dispatch actions
 const mapDispatchToProps = (dispatch) => {
     return {
-        sourcesAction: bindActionCreators(sourcesActionCreator, dispatch)
+        sourcesAction: bindActionCreators(sourcesActionCreator, dispatch),
+        articlesAction: bindActionCreators(articlesActionCreator, dispatch)
     }
 };
 
