@@ -3,8 +3,14 @@ import { FETCHING_ARTICLES,FETCH_ARTICLES_FULFILLED,FETCH_ARTICLES_REJECTED } fr
 const articles = (state={}, action) => {
     switch(action.type){
         case FETCH_ARTICLES_FULFILLED: {
-            // console.log("action payload", action.payload)
-            return action.payload;
+            // we will create an article object using reduce. the data is coming on action payload.
+            const sourceArticlesObject = [...action.payload].reduce((articles, source) => {
+                // create the property and the value of the object.
+                articles[source.sourceId] = source.articles;
+                return articles;
+            },{})
+            console.log(sourceArticlesObject);
+            return sourceArticlesObject;
         }
         default: {
             return state
