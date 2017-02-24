@@ -6,6 +6,7 @@ export default class SideBar extends React.Component{
         const { sources, fetchArticles } = this.props;
         // we just want to execute this function when the sources type is not boolean and the state of prevProps and props is not equal.
         if(typeof sources.sources != "boolean" && prevProps.sources.sources != sources.sources){
+            // we are fetching all the articles of the source
             fetchArticles(sources.sources);     
         }
     }

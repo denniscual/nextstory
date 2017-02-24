@@ -5,13 +5,13 @@ import Articles from "./Articles"
 
 export default class MainSection extends React.Component{
     render(){
-        let { page, sources, fetchArticles } = this.props;
+        let { page, sources, fetchArticles, articles } = this.props;
         return(
                 <main role="main">
                     <div class="container container--isFluid">
                         <div class="row">
                             <SideBar  fetchArticles={fetchArticles} sources={sources} />
-                            <Articles sources={sources} page={page}/>
+                            <Articles articles={articles} sources={sources} page={page}/>
                         </div>
                     </div>
                 </main>

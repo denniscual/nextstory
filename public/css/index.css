@@ -872,7 +872,7 @@ body {
 
 body {
   background-color: white;
-  font-family: 'Montserrat', 'Helvetica', 'Helvetica Neue', 'Open Sans',serif;
+  font-family: 'Source Sans Pro','Montserrat', 'Helvetica', 'Helvetica Neue', 'Open Sans',sans-serif;
   font-weight: 300;
   line-height: 1.45;
   color: #333; }
@@ -919,7 +919,7 @@ li {
 
 a {
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0.21px;
   color: #959595; }
@@ -1008,7 +1008,9 @@ input:-moz-placeholder {
   display: -ms-flexbox;
   display: flex; }
   .grid__item {
-    width: 32.333%; }
+    width: 32.333%;
+    padding: 0 6px; 
+    }
   .grid__sizer {
     width: 32.333%; }
   .grid__gutter {
@@ -1129,37 +1131,49 @@ main {
 #siteArticles {
   margin-left: 5.272%; }
   #siteArticles .headlineText {
-    font-size: 1.4375rem;
+    font-size: 1.2rem;
     color: #959595;
     margin-bottom: 1em; }
-
+.articleRoll{
+  display: flex;
+  flex-wrap: wrap;
+}
 .article {
-  box-shadow: 0 3px 7px 0 rgba(228, 228, 228, 0.5);
+  box-shadow: 0 3px 17px 0 rgba(228, 228, 228, 0.68);
   border-radius: 5px;
-  margin-bottom: 0.5em; }
+  margin-bottom: 0.8em;
+  height: 284px;
+  /*padding: 0 8px; */
+  }
   .article:hover {
     box-shadow: 0 3px 7px 0 rgba(169, 169, 169, 0.5); }
   .article__header {
-    margin: 0; }
+    margin: 0;
+    height: 140px;
+    position: relative;
+    }
     .article__header img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
       object-fit: cover;
-      max-width: 100%; }
+    }
   .article__text {
     padding: 1.5em 1.2em; }
     .article__text h3 {
       margin-top: 0;
-      font-size: 1.0625rem;
+      font-size: 1.1rem;
       font-weight: 400;
       color: #414040; }
-  .article__footer p {
-    font-size: 0.875rem;
+  .article__footer time {
+    font-size: 0.9rem;
     font-weight: 300;
     color: #959595;
     margin-top: 0.9375em;
     margin-bottom: 0; }
 
 .sideNav h4 {
-  margin-top: 1.5625em;
+  margin-top: 1.1em;
   color: #959595;
   font-size: 1.25rem;
   font-weight: 200; }
@@ -1366,3 +1380,14 @@ main {
   }
 }
 
+.loader-inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.ball-pulse-sync > div{
+  background-color: #27ffeb;
+}

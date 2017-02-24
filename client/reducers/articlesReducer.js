@@ -9,7 +9,6 @@ const articles = (state={}, action) => {
                 articles[source.sourceId] = source.articles;
                 return articles;
             },{})
-            console.log(sourceArticlesObject);
             return sourceArticlesObject;
         }
         default: {

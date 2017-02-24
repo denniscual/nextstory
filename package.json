@@ -34,9 +34,11 @@
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-react": "^5.0.1",
     "express": "^4.13.4",
+    "loaders.css": "^0.1.2",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-loaders": "^2.3.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.0",
     "react-router-redux": "^4.0.4",
@@ -58,7 +60,9 @@
     "jest": "^18.1.0",
     "query-string": "^4.3.1",
     "react-addons-test-utils": "^15.0.2",
+    "react-lazyload": "^2.2.4",
     "redux-logger": "^2.8.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "timeago-react": "^1.0.8"
   }
 }
