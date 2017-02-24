@@ -12,7 +12,7 @@ export default class Articles extends React.Component{
             // trasform this array into an array of article Component
             articlesElement = displayArticles.map((article, i) => {
                 return (                 
-                      <Article key={i} article={article.firstArticle}/>
+                      <Article key={i} source={article.source} article={article.firstArticle}/>
                     )
             });
         }

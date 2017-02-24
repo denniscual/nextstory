@@ -1142,7 +1142,7 @@ main {
   box-shadow: 0 3px 17px 0 rgba(228, 228, 228, 0.68);
   border-radius: 5px;
   margin-bottom: 0.8em;
-  height: 284px;
+  height: 240px;
   /*padding: 0 8px; */
   }
   .article:hover {
@@ -1159,14 +1159,19 @@ main {
       object-fit: cover;
     }
   .article__text {
-    padding: 1.5em 1.2em; }
+    padding: 1em; }
     .article__text h3 {
       margin-top: 0;
-      font-size: 1.1rem;
+      margin-bottom: 0;
+      font-size: 1rem;
       font-weight: 400;
       color: #414040; }
-  .article__footer time {
-    font-size: 0.9rem;
+  .article__footer span{
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  .article__footer time{
+    font-size: 0.8rem;
     font-weight: 300;
     color: #959595;
     margin-top: 0.9375em;
@@ -1390,4 +1395,8 @@ main {
 
 .ball-pulse-sync > div{
   background-color: #27ffeb;
+}
+
+p{
+  margin: 5px 0 0 0;
 }

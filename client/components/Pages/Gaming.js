@@ -9,7 +9,7 @@ export default class Gaming extends React.Component{
     }
     render(){
         return(
-            <MainSection fetchArticles={this.props.articlesAction.fetchArticles} page="Gaming News" sources={this.props.sources}/>
+            <MainSection articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Gaming News" sources={this.props.sources}/>
         );
     }
 }

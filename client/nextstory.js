@@ -21,12 +21,12 @@ const appRouter = (
         <Router history={history}>
             <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
-                <Route path="technology" component={Technology}/>
-                <Route path="sport" component={Sport}/>
-                <Route path="business" component={Business}/>
-                <Route path="entertainment" component={Entertainment}/>
-                <Route path="gaming" component={Gaming}/>
-                <Route path="music" component={Music}/>
+                <Route path="/category/technology" component={Technology}/>
+                <Route path="/category/sport" component={Sport}/>
+                <Route path="/category/business" component={Business}/>
+                <Route path="/category/entertainment" component={Entertainment}/>
+                <Route path="/category/gaming" component={Gaming}/>
+                <Route path="/category/music" component={Music}/>
             </Route>          
         </Router>
     </Provider>

@@ -18,22 +18,22 @@ export default class Categories extends React.Component{
                     <IndexLink activeStyle={{color: '#fff', fontWeight: 500}} to="/" > General </IndexLink>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/sport"> Sport </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/sport"> Sport </Link>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/entertainment"> Entertainment </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/entertainment"> Entertainment </Link>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/technology"> Technology </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/technology"> Technology </Link>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/business"> Business </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/business"> Business </Link>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/music"> Music </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/music"> Music </Link>
                 </li>
                 <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/gaming"> Gaming </Link>
+                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/gaming"> Gaming </Link>
                 </li>
             </ul>
         );

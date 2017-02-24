@@ -8,7 +8,7 @@ export default class Business extends React.Component{
     }
     render(){
         return(
-            <MainSection fetchArticles={this.props.articlesAction.fetchArticles} page="Business News" sources={this.props.sources}/>
+            <MainSection articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Business News" sources={this.props.sources}/>
         );
     }
 }
