@@ -8,7 +8,7 @@ export default class Music extends React.Component{
     }
     render(){
         return(
-            <MainSection articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Music News" sources={this.props.sources}/>
+            <MainSection sourceArticles={this.props.sourceArticles} articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Music News" sources={this.props.sources}/>
         );
     }
 }

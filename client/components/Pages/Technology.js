@@ -8,7 +8,7 @@ export default class Technology extends React.Component{
     }
     render(){
         return(
-            <MainSection  articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Technology News" sources={this.props.sources}/>
+            <MainSection sourceArticles={this.props.sourceArticles} articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Technology News" sources={this.props.sources}/>
         );
     }
 }
