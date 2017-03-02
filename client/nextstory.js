@@ -3,11 +3,11 @@ import { render } from "react-dom"
 import { Router, Route, IndexRoute } from "react-router"
   
 // import components
-import VisiblePage from "./components/Containers/VisiblePage"
+import Main from "./components/Presentational/Main"
 import Home from "./components/Pages/Home"
 import Technology from "./components/Pages/Technology"
 import Sport from "./components/Pages/Sport"
-import Business from "./components/Pages/Business"
+import Business from "./components/Containers/Business"
 import Entertainment from "./components/Pages/Entertainment"
 import Gaming from "./components/Pages/Gaming"
 import Music from "./components/Pages/Music"
@@ -19,7 +19,7 @@ import store, { history } from "./store"
 const appRouter = (
     <Provider store={store}> 
         <Router history={history}>
-            <Route path="/" component={VisiblePage}>
+            <Route path="/" component={Main}>
                 <IndexRoute component={Home}/>
                 <Route path="/category/technology" component={Technology}/>
                 <Route path="/category/sport" component={Sport}/>

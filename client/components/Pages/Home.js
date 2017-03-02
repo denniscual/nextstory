@@ -1,22 +1,23 @@
-import React from "react"
+import { connect } from "react-redux"
 
-import MainSection from "../Layout/MainSection"
+import { fetchSources } from "../../actions/sourcesAction"
+import MainSection from "../Presentational/MainSection"
 
-export default class Home extends React.Component{
-    componentDidMount = () => {
-        this.props.sourcesAction.fetchSources("general");
-    }
-
-    render(){
-        return(
-            <div>
-                <MainSection 
-                    sourceArticles={this.props.sourceArticles} 
-                    articles={this.props.sourceArticles.articles} 
-                    fetchArticles={this.props.articlesAction.fetchArticles} 
-                    categoryFilter={this.props.categoryFilter}
-                    page="General News" sources={this.props.sources}/>
-            </div>
-        );
-    }
+// creating a props coming from state
+const mapStateToProps = (state) => {
+  return {
+      processSources: state.sources.processSources,
+      processArticles: state.sourceArticles.processArticles,
+      page: "General News"
+  }
 }
+// passing the callback function as a props to the MainSection layout.
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchSources: () => {
+      dispatch(fetchSources("general"))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainSection);

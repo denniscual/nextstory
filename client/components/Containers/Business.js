@@ -1,24 +1,23 @@
 import { connect } from "react-redux"
 
 import { fetchSources } from "../../actions/sourcesAction"
-import Main from "../Presentational/Main"
+import MainSection from "../Presentational/MainSection"
 
 // creating a props coming from state
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
       processSources: state.sources.processSources,
-      processArticles: state.sources.processArticles
+      processArticles: state.sourceArticles.processArticles,
+      page: "Business News"
   }
 }
-// passing the callback function as a props to the main layout.
+// passing the callback function as a props to the MainSection layout.
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSources: () => {
-      dispatch(fetchSources())
+      dispatch(fetchSources("business"))
     }
   }
 }
 
-const VisiblePage = connect(mapStateToProps, mapDispatchToProps)(Main);
-export default VisiblePage;
+export default connect(mapStateToProps, mapDispatchToProps)(MainSection);
