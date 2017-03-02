@@ -8,7 +8,13 @@ export default class Entertainment extends React.Component{
     }
     render(){
         return(           
-            <MainSection sourceArticles={this.props.sourceArticles} articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="Entertainment News" sources={this.props.sources}/>           
+            <MainSection 
+                categoryFilter={this.props.categoryFilter}
+                sourceArticles={this.props.sourceArticles} 
+                articles={this.props.sourceArticles.articles} 
+                fetchArticles={this.props.articlesAction.fetchArticles} 
+                page="Entertainment News" 
+                sources={this.props.sources}/>           
         );
     }
 }

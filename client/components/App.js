@@ -4,9 +4,7 @@ import { connect } from "react-redux"
 // importing actionCreators
 import * as sourcesActionCreator from "../actions/sourcesAction"
 import * as articlesActionCreator from "../actions/articlesAction"
-
-// import * as postActionCreators from "../actions/posts"
-
+import * as filterActionCreator from "../actions/visibilityAction"
 
 import Main from "./Main"
 
@@ -24,7 +22,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         sourcesAction: bindActionCreators(sourcesActionCreator, dispatch),
-        articlesAction: bindActionCreators(articlesActionCreator, dispatch)
+        articlesAction: bindActionCreators(articlesActionCreator, dispatch),
+        filterAction: bindActionCreators(filterActionCreator, dispatch)
     }
 };
 

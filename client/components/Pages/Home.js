@@ -10,7 +10,12 @@ export default class Home extends React.Component{
     render(){
         return(
             <div>
-                <MainSection sourceArticles={this.props.sourceArticles} articles={this.props.sourceArticles.articles} fetchArticles={this.props.articlesAction.fetchArticles} page="General News" sources={this.props.sources}/>
+                <MainSection 
+                    sourceArticles={this.props.sourceArticles} 
+                    articles={this.props.sourceArticles.articles} 
+                    fetchArticles={this.props.articlesAction.fetchArticles} 
+                    categoryFilter={this.props.categoryFilter}
+                    page="General News" sources={this.props.sources}/>
             </div>
         );
     }

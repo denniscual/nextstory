@@ -1,5 +1,6 @@
 import React from "react"
 
+import FilterLink from "./FilterLink"
 
 export default class SideBar extends React.Component{
     componentDidUpdate(prevProps){
@@ -17,7 +18,9 @@ export default class SideBar extends React.Component{
         let sourceElement = [...sourcesArray].map((item, i) => {
             return (
                 <li key={i} class="siteMenu__item">
-                    <a target="_blank" href={item.url}>{item.name}</a>
+                    <FilterLink filter={item.id}>
+                        {item.name}
+                    </FilterLink>
                 </li>
             );
         })
@@ -30,19 +33,7 @@ export default class SideBar extends React.Component{
                             <ul class="siteMenu siteMenu--isVertical">
                                 {sourceElement}
                             </ul>
-                        </li>
-                        <li class="sideNav__item">
-                            <h4>Latest Sports</h4>
-                            <ul class="siteMenu siteMenu--isVertical">
-                                <li class="siteMenu__item"><a href="#">Six Nations 2017: France 22-16 Scotland</a></li>
-                            </ul>
-                        </li>
-                        <li class="sideNav__item">
-                            <h4>Latest Technology</h4>
-                            <ul class="siteMenu siteMenu--isVertical">
-                                <li class="siteMenu__item"><a href="#">Six Nations 2017: France 22-16 Scotland</a></li>
-                            </ul>
-                        </li>
+                        </li>                       
                     </ul>
                 </nav>
         );

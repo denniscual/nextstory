@@ -4,37 +4,42 @@ import { IndexLink,Link } from "react-router"
 
 export default class Categories extends React.Component{
     render(){
-        const {extraClass, children} = this.props;
+        const {extraClass, children, onClick} = this.props;
 
+        // if there is a children pass
         let extraElement = "";
         if(children != null){
             extraElement = children;
         }
 
+        let categories = [
+            "sport",
+            "entertainment",
+            "technology",
+            "business",
+            "music",
+            "gaming"
+        ];
+
+        let categoriesElement = [...categories].map((cat, i) => {
+            return (
+                <li key={i} class="siteMenu__item" onClick={onClick}>
+                    <Link 
+                        activeStyle={{color: '#fff', fontWeight: 500}} 
+                        to={`/category/${cat}`} >
+                            {cat}
+                    </Link>
+                </li>
+            );
+        });
+
         return(
-            <ul class={`siteMenu  ${extraClass}`}>
+            <ul class={`siteMenu ${extraClass}`}>
                 {extraElement}
-                <li class="siteMenu__item">
+                <li class="siteMenu__item" onClick={onClick}>
                     <IndexLink activeStyle={{color: '#fff', fontWeight: 500}} to="/" > General </IndexLink>
                 </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/sport"> Sport </Link>
-                </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/entertainment"> Entertainment </Link>
-                </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/technology"> Technology </Link>
-                </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/business"> Business </Link>
-                </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/music"> Music </Link>
-                </li>
-                <li class="siteMenu__item">
-                    <Link activeStyle={{color: '#fff', fontWeight: 500}} to="/category/gaming"> Gaming </Link>
-                </li>
+                {categoriesElement}
             </ul>
         );
     }

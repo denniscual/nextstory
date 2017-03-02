@@ -3,19 +3,34 @@ import Article from "./Article"
 
 export default class Articles extends React.Component{
     render(){
-        let { page, articles } = this.props;
-        // this function will return an object.
-        let displayArticles = getFirstArticles(articles);      
+        let { page, articles, categoryFilter } = this.props;
+        // create an articles array.
+        let displayArticles = [];
         // condition if displayArticles has length, display masonry
         let articlesElement;
-        if(displayArticles.length){
-            // trasform this array into an array of article Component
-            articlesElement = displayArticles.map((article, i) => {
-                return (                 
-                      <Article key={i} source={article.source} article={article.firstArticle}/>
-                    )
-            });
+        if(categoryFilter == "SHOW_ALL"){
+            // this function will return an object.
+            displayArticles = getFirstArticles(articles);    
+             if(displayArticles.length){
+                // trasform this array into an array of article Component
+                articlesElement = displayArticles.map((article, i) => {
+                    return (                 
+                        <Article key={i} source={article.source} article={article.firstArticle}/>
+                        )
+                });
+            }        
+        }else{
+            displayArticles = articles[categoryFilter];
+            if(displayArticles.length){
+                // trasform this array into an array of article Component
+                articlesElement = displayArticles.map((article, i) => {
+                    return (                 
+                        <Article key={i} source={categoryFilter} article={article}/>
+                        )
+                });
+            }  
         }
+       
         return(
              <div id="siteArticles" class="row__col-9">
                 <h2 class="headlineText headlineText--dark">{page}</h2>
