@@ -22,7 +22,9 @@
     "production": {
       "plugins": [
         ["transform-object-rest-spread"],
-        ["transform-react-display-name"]
+        ["transform-class-properties"],
+        ["transform-react-display-name"],
+        ["react-html-attrs"]
       ]
     }
   }
