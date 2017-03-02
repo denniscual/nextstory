@@ -3,7 +3,7 @@ import { render } from "react-dom"
 import { Router, Route, IndexRoute } from "react-router"
   
 // import components
-import App from "./components/App"
+import VisiblePage from "./components/Containers/VisiblePage"
 import Home from "./components/Pages/Home"
 import Technology from "./components/Pages/Technology"
 import Sport from "./components/Pages/Sport"
@@ -19,7 +19,7 @@ import store, { history } from "./store"
 const appRouter = (
     <Provider store={store}> 
         <Router history={history}>
-            <Route path="/" component={App}>
+            <Route path="/" component={VisiblePage}>
                 <IndexRoute component={Home}/>
                 <Route path="/category/technology" component={Technology}/>
                 <Route path="/category/sport" component={Sport}/>

@@ -11,10 +11,8 @@ export default class Business extends React.Component{
             <MainSection 
                 sourceArticles={this.props.sourceArticles} 
                 articles={this.props.sourceArticles.articles} 
-                fetchArticles={this.props.articlesAction.fetchArticles} 
                 page="Business News" 
-                categoryFilter={this.props.categoryFilter}
-                sources={this.props.sources}/>
+                />
         );
     }
 }

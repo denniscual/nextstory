@@ -8,14 +8,15 @@ import PreLoader from "./PreLoader"
 export default class MainSection extends React.Component{
     render(){
         let { sourceArticles, page, sources, fetchArticles, articles, categoryFilter } = this.props;
-         let loaderClassess = classNames({
+        // if the fetching is false, add this class
+        let mainCompClass = classNames({
             "container container--isFluid mainContent": true,
             "isVisible": !sources.processSources.fetching && !sourceArticles.processArticles.fetching
             });  
         return(
                 <main role="main">
                     <PreLoader sourceArticles={sourceArticles} sources={sources} />
-                    <div class={loaderClassess}>
+                    <div class={mainCompClass}>
                         <div class="row">
                             <SideBar 
                                 fetchArticles={fetchArticles} 
