@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute } from "react-router"
   
 // import components
 import Main from "./components/Presentational/Main"
-import Home from "./components/Pages/Home"
+import Home from "./components/Containers/Home"
 import Technology from "./components/Pages/Technology"
 import Sport from "./components/Pages/Sport"
 import Business from "./components/Containers/Business"
