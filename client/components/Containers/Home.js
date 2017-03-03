@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
       sources: state.sources.sources,
       processSources: state.sources.processSources,
       processArticles: state.sourceArticles.processArticles,
-      page: "General News"
+      page: "Home News"
   }
 }
 // passing the callback function as a props to the MainSection layout.

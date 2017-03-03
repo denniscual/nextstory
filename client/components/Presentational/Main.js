@@ -1,7 +1,7 @@
 import React from "react"
 
 import DefaultCategoryFilter from "../Containers/DefaultCategoryFilter"
-import Footer from "../Layout/Footer"
+import Footer from "./Footer"
 
 const Main = (props) => 
     (

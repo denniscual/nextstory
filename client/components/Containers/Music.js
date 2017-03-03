@@ -9,14 +9,14 @@ const mapStateToProps = (state) => {
       sources: state.sources.sources,
       processSources: state.sources.processSources,
       processArticles: state.sourceArticles.processArticles,
-      page: "Business News"
+      page: "Music News"
   }
 }
 // passing the callback function as a props to the MainSection layout.
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchSources: () => {
-      dispatch(fetchSources("business"))
+      dispatch(fetchSources("music"))
     }
   }
 }

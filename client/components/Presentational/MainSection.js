@@ -2,7 +2,7 @@ import React from "react"
 import classNames from "classnames"
 
 import FetchArticles from "../Containers/FetchArticles"
-import Articles from "../Layout/Articles"
+import VisibleArticles from "../Containers/VisibleArticles"
 import PreLoader from "./PreLoader"
 
 export default class MainSection extends React.Component{
@@ -24,14 +24,10 @@ export default class MainSection extends React.Component{
                     <div class={mainCompClass}>
                         <div class="row">
                             <FetchArticles sources={sources}/>
-                            {/*<Articles 
-                                articles={articles} 
-                                sources={sources} 
-                                categoryFilter={categoryFilter} 
-                                page={page}/>*/}
+                            <VisibleArticles page={page} />
                         </div>
                     </div>
                 </main>
-        );
+        );  
     }
 }
