@@ -16,7 +16,6 @@ const Categories = ({ extraClass, children, onClick }) => {
         "music",
         "gaming"
     ];
-
     // mapping the categories into a component
     let categoriesElement = [...categories].map((cat, i) => {
         return (
