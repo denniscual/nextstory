@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import classNames from "classnames"
 
 const PreLoader = ({ processSources, processArticles }) => {
@@ -71,5 +71,14 @@ const generatePreloadingElements = (noTimes, callbackFunc) => {
     }
     return arrayElements;
 }
+
+PreLoader.propTypes = {
+    processSources: PropTypes.shape({
+        fetching: PropTypes.bool.isRequired
+    }),
+    processArticles: PropTypes.shape({
+        fetching: PropTypes.bool.isRequired
+    }),
+};
 
 export default PreLoader;

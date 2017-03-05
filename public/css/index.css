@@ -994,7 +994,7 @@ input:-moz-placeholder {
   line-height: 35px; }
   .headlineText--light {
     color: #fff;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     margin: 0 auto; }
   .headlineText--dark {

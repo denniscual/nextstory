@@ -17,7 +17,7 @@ const Masthead = () => {
             </div>
             <div class="container contaier--isFluid noPadding">
                 <div class="overlayContainer">
-                <h2 class="headlineText headlineText--light">Hac nobis blandit eos integer, neque minus, incididunt.</h2>
+                <h2 class="headlineText headlineText--light">Next Story is the most trust website on giving an appropriate latest and breaking news of today’s world.</h2>
                 </div>
             </div>
         </div>          

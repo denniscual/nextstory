@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 
 import Masthead from "./Masthead"
 import Footer from "./Footer"
@@ -11,5 +11,9 @@ const Main = (props) =>
             <Footer />
         </div>
     );
+
+ Main.propTypes = {
+    children: PropTypes.node.isRequired
+ };
 
 export default Main;

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import { IndexLink,Link } from "react-router"
 
 const Categories = ({ extraClass, children }) => { 
@@ -39,5 +39,10 @@ const Categories = ({ extraClass, children }) => {
         </ul>
     );
 }
+
+Categories.propTypes = {
+    extraClass: PropTypes.string.isRequired,
+    children: PropTypes.element
+};
 
 export default Categories;

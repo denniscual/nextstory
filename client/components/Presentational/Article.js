@@ -1,8 +1,9 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import LazyLoad from 'react-lazyload'
 import TimeAgo from 'timeago-react'
 
 import PlaceHolderElement from "./PlaceholderElement"
+import { blurbWord } from "../../tools/tools"
 
 const Article = ({source,article}) =>
     (
@@ -15,7 +16,7 @@ const Article = ({source,article}) =>
                         </LazyLoad>
                     </figure>
                     <div class="article__text">     
-                        <h3 class="headline headline--dark">{blurbWord(article.title)}</h3>
+                        <h3 class="headline headline--dark">{blurbWord(article.title, 50)}</h3>
                         <footer class="article__footer">
                         <p>
                             <span>{source.replace(/-/g, " ") + " - "}</span>
@@ -32,13 +33,15 @@ const Article = ({source,article}) =>
 
     );
 
-export default Article;
+// we can have a type checking to our props by using PropTypes
+Article.propTypes = {
+    source: PropTypes.string.isRequired,
+    article: PropTypes.shape({ // we can use shape function to validate if the object has the given properties or shape.
+        url: PropTypes.string.isRequired,
+        urlToImage:  PropTypes.string,
+        title: PropTypes.string.isRequired,
+        publishedAt: PropTypes.string.isRequired
+    })
+};
 
-const blurbWord = (string) => {
-    let blurbString;
-    if(string.length > 50){
-        blurbString = string.substring(0, 50) + "...";
-        return blurbString;
-    }
-    return string;
-}
+export default Article;

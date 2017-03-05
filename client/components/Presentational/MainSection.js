@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import classNames from "classnames"
 
 import FetchArticles from "../Containers/FetchArticles"
@@ -34,3 +34,19 @@ export default class MainSection extends React.Component{
         );  
     }
 }
+
+MainSection.propTypes = {
+    processSources: PropTypes.shape({
+        fetching: PropTypes.bool.isRequired
+    }),
+    processArticles: PropTypes.shape({
+        fetching: PropTypes.bool.isRequired
+    }),
+    page: PropTypes.string.isRequired,
+    sources: PropTypes.oneOfType([
+        PropTypes.bool.isRequired,
+        PropTypes.arrayOf(PropTypes.object.isRequired)
+    ]),
+    onSetVisibilityFilter: PropTypes.func.isRequired,
+    fetchSources: PropTypes.func.isRequired
+};

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 
 import FilterLink from "../Containers/FilterLink"
 
@@ -47,3 +47,11 @@ export default class SideBar extends React.Component{
         );
     }
 }
+
+SideBar.propTypes = {
+    sources: PropTypes.oneOfType([
+        PropTypes.bool.isRequired,
+        PropTypes.arrayOf(PropTypes.object.isRequired)
+    ]),
+    fetchArticles: PropTypes.func.isRequired
+};

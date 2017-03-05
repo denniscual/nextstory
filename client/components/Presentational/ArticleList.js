@@ -1,4 +1,4 @@
-import React from "react"
+import React, { PropTypes } from "react"
 import Article from "./Article"
 
 const ArticleList = ({ articles, categoryFilter, page}) => {
@@ -53,5 +53,20 @@ const getFirstArticles = (articles) => {
     }
     return displayArticles;
 }
+
+ArticleList.propTypes = {
+    articles: PropTypes.objectOf(
+        PropTypes.arrayOf(
+            PropTypes.shape({
+                url: PropTypes.string.isRequired,
+                urlToImage:  PropTypes.string,
+                title: PropTypes.string.isRequired,
+                publishedAt: PropTypes.string.isRequired
+            })
+        )
+    ),
+    categoryFilter: PropTypes.string.isRequired,
+    page: PropTypes.string.isRequired
+};
 
 export default ArticleList;
