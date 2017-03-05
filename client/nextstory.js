@@ -4,13 +4,13 @@ import { Router, Route, IndexRoute } from "react-router"
   
 // import components
 import Main from "./components/Presentational/Main"
-import Home from "./components/Containers/Home"
-import Technology from "./components/Containers/Technology"
-import Sport from "./components/Containers/Sport"
-import Business from "./components/Containers/Business"
-import Entertainment from "./components/Containers/Entertainment"
-import Gaming from "./components/Containers/Gaming"
-import Music from "./components/Containers/Music"
+import Home from "./components/Presentational/Pages/Home"
+import Technology from "./components/Presentational/Pages/Technology"
+import Sport from "./components/Presentational/Pages/Sport"
+import Business from "./components/Presentational/Pages/Business"
+import Entertainment from "./components/Presentational/Pages/Entertainment"
+import Gaming from "./components/Presentational/Pages/Gaming"
+import Music from "./components/Presentational/Pages/Music"
 
 // import stores
 import { Provider } from "react-redux"

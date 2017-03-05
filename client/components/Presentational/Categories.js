@@ -1,8 +1,8 @@
 import React from "react"
 import { IndexLink,Link } from "react-router"
 
-const Categories = ({ extraClass, children, onClick }) => { 
-    // if there is a children pass
+const Categories = ({ extraClass, children }) => { 
+    // if there is a children pass to our component.
     let extraElement = "";
     if(children != null){
         extraElement = children;
@@ -19,7 +19,7 @@ const Categories = ({ extraClass, children, onClick }) => {
     // mapping the categories into a component
     let categoriesElement = [...categories].map((cat, i) => {
         return (
-            <li key={i} class="siteMenu__item" onClick={onClick}>
+            <li key={i} class="siteMenu__item">
                 <Link 
                     activeStyle={{color: '#fff', fontWeight: 500}} 
                     to={`/category/${cat}`} >
@@ -32,7 +32,7 @@ const Categories = ({ extraClass, children, onClick }) => {
     return(
         <ul class={`siteMenu ${extraClass}`}>
             {extraElement}
-            <li class="siteMenu__item" onClick={onClick}>
+            <li class="siteMenu__item">
                 <IndexLink activeStyle={{color: '#fff', fontWeight: 500}} to="/" > General </IndexLink>
             </li>
             {categoriesElement}

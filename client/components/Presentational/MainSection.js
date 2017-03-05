@@ -6,6 +6,9 @@ import VisibleArticles from "../Containers/VisibleArticles"
 import PreLoader from "./PreLoader"
 
 export default class MainSection extends React.Component{
+    componentWillMount = () => {
+        this.props.onSetVisibilityFilter();
+    }
     componentDidMount = () => {
         this.props.fetchSources();
     }

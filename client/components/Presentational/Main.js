@@ -1,12 +1,12 @@
 import React from "react"
 
-import DefaultCategoryFilter from "../Containers/DefaultCategoryFilter"
+import Masthead from "./Masthead"
 import Footer from "./Footer"
 
 const Main = (props) => 
     (
         <div>
-            <DefaultCategoryFilter/>
+            <Masthead/>
             {React.cloneElement(props.children, props)}
             <Footer />
         </div>

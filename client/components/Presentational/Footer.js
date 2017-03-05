@@ -1,5 +1,7 @@
 import React from "react"
 
+import Categories from "./Categories"
+
 export default class Footer extends React.Component{
     render(){
         return(
@@ -17,14 +19,7 @@ export default class Footer extends React.Component{
                     </div>
                     <div class="row__col-2">
                         <h5 class="headlineText--light">Categories</h5>
-                        <ul class="siteMenu siteMenu--isVertical">
-                            <li class="siteMenu__item"><a href="#">General</a></li>
-                            <li class="siteMenu__item"><a href="#">Sports</a></li>
-                            <li class="siteMenu__item"><a href="#">Business</a></li>
-                            <li class="siteMenu__item"><a href="#">Entertainment</a></li>
-                            <li class="siteMenu__item"><a href="#">Music</a></li>
-                            <li class="siteMenu__item"><a href="#">Technology</a></li>
-                        </ul>
+                        <Categories extraClass="siteMenu siteMenu--isVertical" />
                     </div>
                     <div class="row__col-2">
                         <h5 class="headlineText--light">Help</h5>
