@@ -4,7 +4,6 @@ import { Link } from "react-router"
 import Categories from "./Categories"
 
 const Masthead = ({onSetVisibilityFilter}) => {
-    console.info("Masthead is render");
     return(
         <div id="siteMasthead" class="container container--isFLuid noPadding">
             <div class="container container--isFluid noPadding">
