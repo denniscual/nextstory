@@ -1,6 +1,7 @@
-# Learn Redux
+# Nextstory News Application
 
-A simple React + Redux implementation. This will be turned into a free video series once the app is totally fleshed out.
+Next Story is the most trust website on giving an appropriate latest and breaking 
+news of today’s world.
 
 ## Running
 
