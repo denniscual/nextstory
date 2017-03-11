@@ -4,6 +4,7 @@ const categoryReducer = (state=[], action) => {
     switch(action.type){
         case FETCH_SOURCES_FULFILLED: {
             const newsSources = [...action.payload];
+            console.log(newSources);
             const newsCatSources = newsSources.map(item => item.category);
             // convert into set so that we can filter only the unique values
             const uniqueSourcesCat = new Set(newsCatSources);
